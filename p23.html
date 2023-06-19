@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 400px;
+        }
+        table,tr,td,th {
+            border: 2px solid #222;
+            border-collapse: collapse;
+        }
+
+        th,td {
+            background-color: #ccc;
+        }
+        th {
+            text-align: center;
+            font-weight: bold;
+        }
+        tr:last-child {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h3>Registration Form</h3>
+
+    <!-- 
+        placehoder => hint to the user
+        value => default value
+        readonly => write protect or make the field readonly
+     -->
+
+   <form method="post" enctype="multipart/form-data" autocomplete="off">
+    <table>
+        <tr>
+            <th>Enter Your first name</th>
+            <td>
+                <input type="text" name="firstName" id="firstName" placeholder="first name here" value="Ganesh"  readonly required>
+            </td>
+        </tr>       
+        <tr>
+            <th>Enter Your last name</th>
+            <td>
+                <input type="text" name="lastName" id="lastName" autofocus required>
+            </td>
+        </tr>
+        <tr>
+            <th>Enter Your password</th>
+            <td>
+                <input type="password" name="password" id="password" required>
+            </td>
+        </tr>
+        <tr>
+            <th>ReEnter Your password</th>
+            <td>
+                <input type="password" name="confirmPassword" id="confirmPassword" required>
+            </td>
+        </tr>
+        <tr>
+            <th>Enter Your Email</th>
+            <td>
+                <input type="email" name="email" id="email" required>
+            </td>
+        </tr>
+        <tr>
+            <th>Enter Your Mobile</th>
+            <td>
+                <input type="number" name="mobile" id="mobile" required>
+            </td>
+        </tr>
+        <tr>
+            <th>Enter Your Address</th>
+            <td>
+                <textarea name="address" id="address" cols="22" rows="7" required></textarea>
+            </td>
+        </tr>
+        <tr>
+            <th>Select Your Gender</th>
+            <td>
+                 <label for="">
+                        Male <input type="radio" name="gender" id="gender" value="male" required>
+                 </label>
+                
+                 <label for="">
+                        FeMale <input type="radio" name="gender" id="gender" value="female" checked required>
+                 </label>
+                
+            </td>
+        </tr>
+        <tr>
+            <th>Select Your Hobbies</th>
+            <td>
+               <label for="hobbies1">
+                    hobby1
+                    <input type="checkbox" name="hobbies1" id="hobbies1" value="cycling" required> 
+               </label>
+               
+               <label for="hobbies2">
+                    hobby2
+                    <input type="checkbox" name="hobbies2" id="hobbies2" value="riding" checked required>
+               </label>
+               
+               <label for="hobbies3">
+                    hobbies3
+                    <input type="checkbox" name="hobbies3" id="hobbies3" value="trekking" required>
+               </label>
+            </td>
+        </tr>
+
+        <tr>
+            <th>Select Your DOB</th>
+            <td>
+                <input type="date" name="dob" id="dob" required>
+            </td>
+        </tr>
+
+        <tr>
+            <th>Select Your Country</th>
+            <td>
+                <select name="country" id="country" multiple>
+                    <option value="null">Choose your Country</option>
+                    <option value="india">India</option>
+                    <option value="nepal">Nepal</option>
+                    <option value="japan">Japan</option>
+                    <option value="bhuthan">Bhuthan</option>
+                    <option value="other">Other</option>
+                </select>
+            </td>
+        </tr>
+        
+        <tr>
+            <th>Upload your pic</th>
+            <td>
+                <input type="file" name="upload" id="upload" required>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2"> 
+                <input type="submit" value="Save My Data">
+                <input type="reset" value="Reset Data">
+            </td>
+        </tr>
+    </table>
+   </form>
+</body>
+</html>
